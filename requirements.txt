@@ -2,3 +2,4 @@ Flask==2.0.2
 opencv-python-headless==4.5.4.58
 tensorflow==2.7.0
 pyodbc==4.0.32
+numpy=1.26.4
