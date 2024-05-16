@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Prediction Result</title>
+    <meta charset="UTF-8">
+    <link href=".\static\style.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #CDE8E5;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        a{
+            text-decoration: none;
+        }
+        .cont, h1{
+            padding: 10px;
+        }
+        .cont, h1, .data_h1, .span, .span_2{
+            font-size: 20px;
+            color: rgb(188, 123, 38);
+            padding: 10px;
+        }
+        .go_back{
+            width: 100px;
+            height: 50px;
+            font-size: 18px;
+            background-color: #37b4c4a5;
+            border: none;
+            border-radius: 5px;
+            transition: all .7s;
+            margin: 30px;
+        }
+        .go_back:hover{
+            box-shadow: 3px 3px 2px 3px #888888;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class='cont'>
+            {% if data['prediction'] > 0.50 %}
+            <h1>I think it's a dog</h1>
+            {% else %}
+            <h1>It looks like a cat</h1>
+            {% endif %}
+        </div>
+
+        <!-- <h1 class="data_h1">Accuracy:<br>Cat: <span class="span">{{ data['prediction'] }}</span><br></h1> -->
+
+        <!-- Render the image -->
+        <img src="data:image/jpeg;base64,{{ data['image'] }}" alt="Uploaded Image">
+
+        <br><br>
+        <button class="go_back"><a href="/" class='btn'>Go Back</a></button>
+    </center>
+</body>
+</html>
