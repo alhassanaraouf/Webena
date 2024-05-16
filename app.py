@@ -4,7 +4,7 @@ from tensorflow.keras.models import load_model
 import numpy as np
 import base64
 
-model = load_model('./static/model.h5')  # Load pre-trained model
+model = load_model('./model.h5')  # Load pre-trained model
 model.compile(loss='categorical_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
 
 app = Flask(__name__, template_folder='./templates', 
