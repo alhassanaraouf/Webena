@@ -1,41 +1,33 @@
 # Image Prediction Web App
 
 ## Overview
-This project is a web application for predicting the content of uploaded images. It uses a pre-trained deep learning model to classify images into categories (e.g., dog, cat) and stores the results in an Azure SQL Database. Users can upload an image through the web interface, and the application will display the prediction result along with the uploaded image.
+
+The Image Prediction Web App is a sophisticated web application designed to predict the content of uploaded images. Leveraging a pre-trained deep learning model, it classifies images into various categories (e.g., dog, cat) and stores the results in an Azure SQL Database. Users can upload images through the web interface, and the application will display the prediction results alongside the uploaded images.
 
 ## Features
-- Web interface for uploading images and displaying prediction results.
-- Integration with an Azure SQL Database to store image data and prediction results.
-- Usage of a pre-trained deep learning model for image classification.
 
-## Setup
-1. Clone this repository to your local machine.
-2. Install the required dependencies using `pip install -r requirements.txt`.
-3. Download the pre-trained deep learning model (`model.h5`) and place it in the `static` directory.
-4. Configure the Azure SQL Database connection settings in the Flask application (`app.py`).
-5. Run the Flask application using `python app.py`.
-6. Access the web interface in your browser at `http://localhost:5000`.
-
-## File Structure
-- `app.py`: Flask application containing routes for handling image uploads, predictions, and database interactions.
-- `static/`: Directory containing static files such as CSS stylesheets and the pre-trained model.
-- `templates/`: Directory containing HTML templates for the web interface.
-
-## Dependencies
-- Flask: Web framework for building the application.
-- OpenCV (cv2): Library for image processing.
-- Keras: Deep learning framework for loading and using the pre-trained model.
-- pyodbc: Library for connecting to the Azure SQL Database.
+- **User-Friendly Web Interface:** Enables users to upload images and view prediction results effortlessly.
+- **Azure SQL Database Integration:** Stores image data and prediction results securely and efficiently.
+- **Pre-Trained Deep Learning Model:** Utilizes a powerful model for accurate image classification.
 
 ## Usage
-1. Access the web interface in your browser.
-2. Upload an image using the provided form.
-3. Wait for the prediction result to be displayed.
-4. View the prediction result along with the uploaded image.
 
-## Contributors
-- [Your Name]
+1. **Access the Web Interface:**
+   - Navigate to the web application in your browser.
+2. **Upload an Image:**
+   - Use the provided form to upload an image.
+3. **View Prediction Results:**
+   - Wait for the application to process the image and display the prediction result along with the uploaded image.
 
-## License
-[License information]
+## File Structure
 
+- **app.py:** Core Flask application handling routes for image uploads, predictions, and database interactions.
+- **static/**: Directory for static files such as CSS stylesheets and the pre-trained model.
+- **templates/**: Directory for HTML templates used in the web interface.
+
+## Dependencies
+
+- **Flask:** Web framework for developing the application.
+- **OpenCV (cv2):** Library for advanced image processing.
+- **Keras:** Deep learning framework for loading and utilizing the pre-trained model.
+- **pyodbc:** Library for connecting to the Azure SQL Database.
