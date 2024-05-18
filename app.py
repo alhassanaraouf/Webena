@@ -31,4 +31,4 @@ def home():
     return render_template('prediction.html', data={'image': base64.b64encode(img_binary).decode('utf-8'), 'prediction': probability_class_1})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
